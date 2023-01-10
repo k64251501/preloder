@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <meta name="viewport" content="=width=divce-device" initialsclale="0.1">
+        <title>pre-loder</title>
+        <style>
+            body{
+                background: #000;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            h1{
+                text-decoration: green;
+            }
+        
+            
+            .preloader{
+                position:relative;
+                width: 100px;
+                height: 100px;
+            }
+            
+                .preloader span{
+                   width: 22px;
+                   height: 22px;
+                   position: absolute;
+                   animation: preloader 1s linear infinite;
+                   background-color: tomato;
+                }
+                .preloader span:nth-child(2){
+                    left: 22px;
+                    animation-delay: .2s;
+
+                }
+                .preloader span:nth-child(3){
+                    top: 22px;
+
+                    animation-delay: .4s;
+
+                }
+                .preloader span:nth-child(4){
+                    left: 22px;
+                    top: 22px;
+                    animation-delay: .6s;
+
+                }
+                @keyframes preloader {
+                    0%{
+                        transform: scale(1);
+                    }
+                    50%{
+                        transform: scale(0.5);
+                    }
+                    100%{
+                        transfrom: scale(1)
+                    }
+                    
+                }
+            
+        </style>
+
+    </head>
+    <body>
+        <h1>PRELODER ANIMATION</h1>
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </body>
+</html>
